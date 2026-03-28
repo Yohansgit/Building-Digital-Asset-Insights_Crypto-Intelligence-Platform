@@ -34,13 +34,13 @@ API / Eventstream → Notebook (transformation) → Lakehouse → Dataflow → W
  
 Each component is modular and reusable, allowing the pipeline to scale horizontally (more coins, new data sources) and vertically (role-based reporting, alerts).
 
-# Folder / File Structure
+# Folder / File Structure  
 crypto-insights-project/
-├── notebooks/                # Ingestion & transformation scripts
-├── dataflows/               # Power Query M transformations
-├── dashboard/               # Power BI report (.pbix)
-├── documentation/           # README, architecture diagram
-└── config/                  # API keys, table mappings
+├── notebooks/                # Ingestion & transformation scripts  
+├── dataflows/               # Power Query M transformations   
+├── dashboard/               # Power BI report (.pbix)   
+├── documentation/           # README, architecture diagram   
+└── config/                  # API keys, table mappings   
 
 # Setup Instructions
 Fabric workspace set up
