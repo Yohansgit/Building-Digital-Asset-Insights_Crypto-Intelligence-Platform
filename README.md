@@ -1,86 +1,207 @@
-## Digital Asset Insights – Crypto Intelligence Platform
+# 🚀 Digital Asset Insights – Crypto Intelligence Platform
 
-# Digital Asset Insights
+## 📌 Overview
+Digital Asset Insights is a real-time and historical cryptocurrency analytics platform built using **Microsoft Fabric** and **Power BI**. It enables users to monitor market behavior, analyze trends, and track live trading activity through a unified data pipeline.
 
-# Objective
-To build a real-time and historical cryptocurrency intelligence dashboard using Microsoft Fabric and Power BI.  This evaluation helps decision-makers analyze price trends, trade movement and market capitalization using live and curated data pipelines.
+---
 
-# Problem Statement
-The crypto market is decentralized, volatile, and lacks consolidated analytical tools for real-time tracking. Our project aims to bridge this gap by building a unified data solution using Microsoft Fabric.
+## 🎯 Objective
+Build a scalable crypto intelligence dashboard that:
+- Aggregates real-time and historical data  
+- Enables trend and volatility analysis  
+- Supports modular and scalable data pipelines  
+- Delivers insights via interactive dashboards  
 
-# Tools & Technologies
-Data Ingestion: REST APIs (CoinGecko, Yahoo Finance)
-Real-time Streaming: Microsoft Fabric Eventstream
-Data Processing: Notebooks (Python, PySpark, Pandas)
-Storage: Lakehouse, Warehouse
-Transformation: Dataflows
-Visualization: Power BI (dark theme)
+---
 
-# Cryptocurrencies Tracked
-Bitcoin (BTC)
-Ethereum (ETH)
-Dogecoin (DOGE)
-XRP
-Stellar (XLM)
-Monero (XMR)
-USD Coin (USDC)
-TRON (TRX)
-NEM (XEM)
-Litecoin (LTC)
+## ⚠️ Problem Statement
+The cryptocurrency market is:
+- Decentralized  
+- Highly volatile  
+- Lacking unified analytics platforms  
 
-# Project Architecture
-End-to-End Flow:
-API / Eventstream → Notebook (transformation) → Lakehouse → Dataflow → Warehouse → Power BI
- 
-Each component is modular and reusable, allowing the pipeline to scale horizontally (more coins, new data sources) and vertically (role-based reporting, alerts).
+This project addresses these challenges by creating a centralized, scalable solution using Microsoft Fabric.
 
-# Folder / File Structure  
-crypto-insights-project/
-├── notebooks/                # Ingestion & transformation scripts  
-├── dataflows/               # Power Query M transformations   
-├── dashboard/               # Power BI report (.pbix)   
-├── documentation/           # README, architecture diagram   
-└── config/                  # API keys, table mappings   
+---
 
-# Setup Instructions
-Fabric workspace set up
-Configure CoinGecko API (no key needed, but rate-limited)
-Launch notebook: CryptoIngest.ipynb to fetch data
-Save ingested data to Lakehouse tables
-Use Dataflow to transform tables for reporting
-Link Fabric Warehouse to Power BI
-Load .pbix file or create visuals from Warehouse tables
-Enable real-time refresh using Eventstream
-Sample Tables Created
-crypto_price_history – Historical OHLC + volume data
-live_market_snapshot – Streaming price + volume every 30s
-crypto_name_symbol_map – Metadata about coins
+## 🛠️ Tech Stack
 
-# Dashboard Overview
-Real-time price feed
-Historical trend charts
-Volume spikes & volatility analysis
-Dark theme layout for better focus
-Ready for role-based slicing (e.g., by user type)
+- **Data Ingestion:** REST APIs (CoinGecko, Yahoo Finance)  
+- **Streaming:** Microsoft Fabric Eventstream  
+- **Processing:** Python, PySpark, Pandas  
+- **Storage:** Lakehouse, Warehouse  
+- **Transformation:** Power BI Dataflows (Power Query M)  
+- **Visualization:** Power BI (Dark Theme Dashboard)  
 
-# Known Limitations
-CoinGecko API has rate limits
-Data may be delayed if Eventstream is paused
-Sentiment data is not yet integrated
-Dashboard not yet mobile-optimized
+---
 
-# Future Enhancements
-Add more coins for testing scalability
-Implement role-based dashboards
-Improve performance monitoring and refresh scheduling
+## 📊 Cryptocurrencies Tracked
+- Bitcoin (BTC)  
+- Ethereum (ETH)  
+- Dogecoin (DOGE)  
+- XRP  
+- Stellar (XLM)  
+- Monero (XMR)  
+- USD Coin (USDC)  
+- TRON (TRX)  
+- NEM (XEM)  
+- Litecoin (LTC)  
 
-# Team and credits
-Microsoft Fabric Project
-Developed by: 
-Emma Imujaru
-Racheal Otieno	 
-Yohannes Setotaw	
-Camilla Odika  
-Fred Willis Ochako
+---
 
+## 🏗️ Architecture
+
+### End-to-End Flow
+
+
+### Design Principles
+- Modular and reusable components  
+- Scalable pipeline architecture  
+- Supports both real-time and batch processing  
+
+---
+
+## 📁 Project Structure
+crypto-insights-project/  
+├── notebooks/ # Ingestion & transformation scripts  
+├── dataflows/ # Power Query transformations  
+├── dashboard/ # Power BI report (.pbix)  
+├── documentation/ # README & architecture diagrams  
+└── config/ # API keys, mappings  
+
+---
+
+## ⚙️ Setup Instructions
+
+1. Create a Microsoft Fabric workspace  
+2. Configure CoinGecko API (rate-limited, no key required)  
+3. Run notebook:  
+
+
+4. Save data to Lakehouse tables  
+5. Build transformations using Dataflows  
+6. Connect Warehouse to Power BI  
+7. Load `.pbix` or create visuals  
+8. Enable real-time refresh using Eventstream  
+
+---
+
+## 🧱 Data Model
+
+| Table Name | Description |
+|-----------|------------|
+| crypto_price_history | Historical OHLC + volume |
+| live_market_snapshot | Real-time price updates (30s interval) |
+| crypto_name_symbol_map | Cryptocurrency metadata |
+
+---
+
+## 📈 Dashboard Features
+- Real-time price tracking  
+- Historical trend visualization  
+- Volume and volatility analysis  
+- Dark theme UI  
+- Role-based filtering (planned)  
+
+---
+
+## ⚠️ Known Limitations
+- API rate limits (CoinGecko)  
+- Possible delays if Eventstream pauses  
+- No sentiment analysis  
+- Not optimized for mobile  
+
+---
+
+## 🔮 Future Enhancements
+- Add more cryptocurrencies  
+- Integrate sentiment analysis (NLP)  
+- Implement role-based dashboards  
+- Improve performance monitoring  
+- Mobile optimization  
+
+---
+
+## 👥 Team
+Microsoft Fabric Project  
+
+- Yohannes S.  
+- Emma I.  
+- Racheal O.  
+- Camilla O.  
+- Fred W.  
+
+---
+
+## 💡 Key Highlights
+- End-to-end data engineering pipeline  
+- Real-time + batch processing architecture  
+- Strong use of Microsoft Fabric ecosystem  
+- Scalable and modular design  
+- Business-focused data visualization  
+
+---
+4. Save data to Lakehouse tables  
+5. Build transformations using Dataflows  
+6. Connect Warehouse to Power BI  
+7. Load `.pbix` or create visuals  
+8. Enable real-time refresh using Eventstream  
+
+---
+
+## 🧱 Data Model
+
+| Table Name | Description |
+|-----------|------------|
+| crypto_price_history | Historical OHLC + volume |
+| live_market_snapshot | Real-time price updates (30s interval) |
+| crypto_name_symbol_map | Cryptocurrency metadata |
+
+---
+
+## 📈 Dashboard Features
+- Real-time price tracking  
+- Historical trend visualization  
+- Volume and volatility analysis  
+- Dark theme UI  
+- Role-based filtering (planned)  
+
+---
+
+## ⚠️ Known Limitations
+- API rate limits (CoinGecko)  
+- Possible delays if Eventstream pauses  
+- No sentiment analysis  
+- Not optimized for mobile  
+
+---
+
+## 🔮 Future Enhancements
+- Add more cryptocurrencies  
+- Integrate sentiment analysis (NLP)  
+- Implement role-based dashboards  
+- Improve performance monitoring  
+- Mobile optimization  
+
+---
+
+## 👥 Team
+Microsoft Fabric Project  
+
+- Yohannes S.  
+- Emma I.  
+- Racheal O.  
+- Camilla O.  
+- Fred W.  
+
+---
+
+## 💡 Key Highlights
+- End-to-end data engineering pipeline  
+- Real-time + batch processing architecture  
+- Strong use of Microsoft Fabric ecosystem  
+- Scalable and modular design  
+- Business-focused data visualization  
+
+---
 
